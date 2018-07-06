@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brenner Swenson</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Assistant:300|Lato:300|Merriweather:300,400|PT+Serif:700|Playfair+Display" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100|Open+Sans:300" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static '/css/tomorrow.css' %}">
+
+    <link rel="stylesheet" href="{% static '/css/master.css' %}">
+
+    <script src="{% static '/js/highlight.pack.js' %}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script src="{% static 'slick/slick.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'slick/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'slick/slick-theme.css' %}">
+
+    <script src="{% static 'js/main.js' %}">
+
+  </script>
+
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+</head>
+
+<body>
+  <div class="globalContainer container-fluid">
+
+    <header class="navContainer container-fluid">
+
+      <nav class="navbar navbar-light navbar-expand-sm  mynav" role='navigation' id='navbar'>
+        <div class="container">
+          <a href="{% url 'home' %}" class="nav navbar-nav justify-content-start nav-link mynav" id='myNavIDLeft'>Brenner Swenson</a>
+          <ul class="nav navbar-nav justify-content-end mynav" id="myNavID">
+            <li class='nav-item' id="myNavID">
+              <a href="{% url 'projects:projects' %}" class="nav-link" id="myNavID">Projects</a>
+            </li>
+            <li class="nav-item" id="myNavID">
+              <a href="{% url 'resume' %}" class="nav-link" id="myNavID">Resume</a>
+            </li>
+            <li class='nav-item' id="myNavID">
+              <a href="https://www.linkedin.com/in/brenner-swenson/" class="nav-link" id="myNavID">LinkedIn</a>
+            </li>
+
+          </ul>
+
+        </div>
+      </nav>
+    </header>
+    <section class="row myContent">
+      {% block content %}
+        <p></p>
+      {% endblock content %}
+    </section>
+    <footer class="footer">
+      <div class="container-fluid footerContainer">
+        <div class="row">
+          <div class="col-sm-12 footer text-center">
+            <div class="footerContent">
+              <h5 class='text-muted'>Contact me:</h5>
+              <h5 class='text-muted'>brenner.swenson@gmail.com</h5>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

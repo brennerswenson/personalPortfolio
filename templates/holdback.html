@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<div class="container-fluid holdbackBigContainer">
+  <div class="row">
+    <div class="col-sm-12 holdbackTitleContainer">
+      <h1 class="holdbackTitle">Hedge fund full-redemption hold back interest calculator</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 holdbackExcelLink">
+      <a class="holdbackExcelLink"href="{% static '/excel/Holdback Interest Calculator.xlsx' %}" download>Download Excel file</a>
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-12 holdbackTextContainer">
+      <p class="holdbackText">
+        <div class="holdbackBriefExplanation">
+
+          The spreadsheet above is something that I built while working for Strata Fund Solutions, it calculates interest for hedge fund redemption hold back balances. For confidentiality reasons I've omitted/deleted any client-specific information in this spreadsheet, including the Excel file's metadata. Here is an explanation of what the file is, and how it works:
+          <br>
+          <br>
+          <div class="holdbackFileDisclaimer">
+          (Please download the Excel file and explore while you read!)
+          </div>
+          <br>
+        </div>
+        <div class="holdbackLongExplanation">
+          After my first few months at Strata Fund Solutions, we onboarded a huge client out of New York, with dozens of funds with an excess of $1bn in assets under management. Prior to hiring Strata as their administrator, they performed all of their performance
+          reporting, accounting, and treasury management internally.
+          <br>
+          <br> The majority of this client's funds were hedge funds, which allow investors to redeem their capital with more ease compared to private equity funds, which are locked in for periods of sometimes 7 years or more.
+          <br>
+          <br> An investor who redeems will submit a redemption request, and then the fund has on average about a quarter or so (dependent on their limited partnership agreement) to pay out the investor's requested capital. However, as an investor's net
+          asset value is constantly changing month to month, and auditors' can make income/expense adjustments, it is very common for funds to withhold, or "hold back" a small portion of an investor's capital balance (typically 5 or 10 percent) if they
+          are fully redeeming--because their capital balance could change if auditors make any adjustments that affect the fund's net income.
+          <br>
+          <br> The hold back balance is 5% of the investor's redemption balance, so, as a provision of the Limited Partnership Agreement of our client's funds, after a quarter has passed since the redemption, they are required to pay out the amount that
+          makes the investor's remaining hold back balance equal to 1% of their ending capital balance at the end of the last reporting period. This sounds very confusing, but can be seen in row I of my workbook provided.
+
+          <br>
+          <br> As a result of the fund holding this 5 or 10 percent balance, for the reason that the fund is not actively trying to produce alpha with this capital, the fund accrues a small amount of interest on these balances. The amount of interest
+          is then added to the held back amount (the 1% balance that remains), and paid to the investor once the audit is completed.
+
+          <br>
+          <br> Our client used to calculate the interest amounts with an Excel tab for every limited partner (there can be hundreds of them), and with 100 - 200 rows for each day's balance, which compounds monthly. As this was not efficient, and had a
+          high potential for error, my team tasked me with creating a sheet that does all of this calculation on one page, no matter how many limited partners there are. The ending result is one spreadsheet that compounds an investor's hold back interest
+          amount, and uses if/else logic to determine which balance to calculate/compound the interest on, and for how many days.
+
+          <br>
+          <br> For example, if a limited partner had a hold back balance, but then the fund made a payment of the 4% in the middle of the month, then the fund would need to accrue interest on two different balances for that month: the larger balance before
+          the payment was made, and the balance after the payment was made. You can see this being calculated in column AI for the month of May 2017.
+
+          <br>
+          <br> Ideally, the user of this spreadsheet would unhide the appropriate columns as the year goes on, so you can obtain the ending hold back interest payable number, which would be found in cell BO29 of the workbook. This figure would end up in
+          the fund's financial statements on the balance sheet. Although immaterial, it was a very important item for our client--this workbook was sent along side monthly financial statements for our client's dozens of hedge funds.
+          <br>
+          <div class="holdbackLongExplanationEnd">
+          <br>
+          Thank you for reading, and please download the file and have a look for yourself!
+          </div>
+          <br>
+          <br>
+        </div>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock content %}

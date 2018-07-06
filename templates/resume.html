@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+  <div class="container-fluid resumeContainer">
+    <div class="resumeTitleRow row">
+      <h1 class="resumeTitle col-sm-12 center-block text-center" >Resume</h1>
+    </div>
+    <div class="resumeBorderRow row">
+
+    </div>
+    <div class="resumeRow row">
+      <div id="resume" class='col-sm-6'>
+        <script src="{% static 'js/pdfobject.js' %}"></script>
+        <script>
+          PDFObject.embed("{% static 'pdfs/BRENNER SWENSON RESUME.pdf' %}", "#resume");
+        </script>
+
+      </div>
+    </div>
+
+  </div>
+
+{% endblock content %}
