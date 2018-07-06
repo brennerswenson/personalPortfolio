@@ -10,3 +10,6 @@ class HomePage(TemplateView):
 
 class Resume(TemplateView):
     template_name = 'resume.html'
+
+class ReferencesView(TemplateView):
+    template_name = 'references.html'

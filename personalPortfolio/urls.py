@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.HomePage.as_view(), name='home'),
     path('resume/', views.Resume.as_view(), name='resume'),
+    path('references/', views.ReferencesView.as_view(), name='references'),
     path('projects/', include('projects.urls', namespace='projects'))
 ]

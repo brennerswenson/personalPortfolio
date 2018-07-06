@@ -415,7 +415,69 @@ ul {
   text-align: center;
 }
 
+.referencesTitleContainer{
+  padding-top: 3vh;
+  padding-left: 5vw;
+  text-align: left;
+}
 
+.referencesTitle {
+  font-size: 2.8rem;
+}
+
+.referencesHeaderText{
+  font-size: 1.35rem;
+  padding-left: 19vw;
+  padding-right: 19vw;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+  text-align: center;
+}
+
+.recommendationText{
+  margin-left: 4vw;
+  margin-right: 4vw;
+  font-size: 1.2rem;
+  font-style: oblique;
+}
+
+.recommenderHeading{
+  font-size: 1.4rem;
+  font-style: normal;
+}
+
+.fadedScrollerReferences {
+  overflow: auto;
+  position: relative;
+  height: 50vh;
+}
+
+.fadedScrollerReferences_fade {
+  content: '';
+  margin-top: -50vh;
+  height: 35px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  position: relative;
+}
+
+.fa-linkedin {
+  color:rgb(31, 111, 145);
+}
+
+.patrickRecommendationContainer{
+  height: 65vh;
+}
+.albertRecommendationContainer{
+  height: 65vh;
+}
+
+.recTextContainer{
+  padding-right: 1vw;
+}
+
+.fa-home{
+  font-size: 1.8rem;
+}
 
 /* Phones */
 
@@ -450,6 +512,12 @@ ul {
   }
   .aboutMeTitle {
     padding-top: 1rem;
+  }
+
+  .aboutMeTitleContainer{
+    padding-left: 1rem;
+    padding-right: 1rem;
+
   }
   .projectsTitle {
     padding-top: 1rem;

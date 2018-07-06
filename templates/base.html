@@ -14,6 +14,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Assistant:300|Lato:300|Merriweather:300,400|PT+Serif:700|Playfair+Display" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100|Open+Sans:300" rel="stylesheet">
@@ -46,7 +48,7 @@
 
       <nav class="navbar navbar-light navbar-expand-sm  mynav" role='navigation' id='navbar'>
         <div class="container">
-          <a href="{% url 'home' %}" class="nav navbar-nav justify-content-start nav-link mynav" id='myNavIDLeft'>Brenner Swenson</a>
+          <a href="{% url 'home' %}" class="nav navbar-nav justify-content-start nav-link mynav" id='myNavIDLeft'><i class="nav-link fas fa-home fa-1x"></i></a>
           <ul class="nav navbar-nav justify-content-end mynav" id="myNavID">
             <li class='nav-item' id="myNavID">
               <a href="{% url 'projects:projects' %}" class="nav-link" id="myNavID">Projects</a>
@@ -55,7 +57,13 @@
               <a href="{% url 'resume' %}" class="nav-link" id="myNavID">Resume</a>
             </li>
             <li class='nav-item' id="myNavID">
-              <a href="https://www.linkedin.com/in/brenner-swenson/" class="nav-link" id="myNavID">LinkedIn</a>
+              <a href={% url 'references' %} class="nav-link" id="myNavID">References</a>
+            </li>
+            <li class='nav-item' id="myNavID"> <a href="https://github.com/brennerswenson"><i class="nav-link fab fa-github fa-2x"></i></a>
+              {# <a href="https://www.linkedin.com/in/brenner-swenson/" class="nav-link" id="myNavID">LinkedIn</a> #}
+            </li>
+            <li class='nav-item' id="myNavID"> <a href="https://www.linkedin.com/in/brenner-swenson/"><i class=" nav-link fab fa-linkedin refLinkedInBtn fa-2x"></i></a>
+              {# <a href="https://www.linkedin.com/in/brenner-swenson/" class="nav-link" id="myNavID">LinkedIn</a> #}
             </li>
 
           </ul>
