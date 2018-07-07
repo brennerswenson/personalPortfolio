@@ -1,20 +1,26 @@
 .navbar-light {
-  box-shadow: 1px 2px 2px 0px rgba(136, 136, 136, 0.5);
-  border-radius: 5px;
-  background-color: rgba(251, 251, 251);
+  box-shadow: -1px 3px 15px -4px rgba(0,0,0,0.5);
+  background-color: #313131;
 }
 
 #myNavIDLeft {
-  font-size: 150%;
-  color: black;
+  font-size: 1.10rem;
+  color: #ffffff;
   text-align: left;
+  font-weight: 100;
 }
 
 #myNavID {
-  font-size: 108%;
-  color: black;
+  font-size: 1.05rem;
+  color: #ffffff;
   margin-right: 5px;
   margin-left: 5px;
+  font-weight: 100;
+  font-family: 'Lato', sans-serif;
+}
+
+.nav-text {
+  padding-top: .28rem;
 }
 
 body {
@@ -28,16 +34,29 @@ body {
 }
 
 .footer {
-  box-shadow: -1px -33px 21px -34px rgba(0, 0, 0, 0.19);
+  box-shadow: -1px -5px 11px -5px rgba(0,0,0,0.76);
   position: absolute;
   bottom: 0;
   width: 100%;
+  background-color: #313131;
+  left: 0;
+  right: 0;
+}
 
+.fa-envelope{
+  font-size: 1.4rem;
+}
+
+#footerEmail{
+  padding-top: .25rem;
 }
 
 .footerContent {
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top: .75rem;
+  color: #ffffff;
+  font-weight: 100;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.0rem;
 }
 
 * {
@@ -89,11 +108,11 @@ body {
 .resumeContainer {
   margin: 40px;
   border-radius: 20px;
-  box-shadow: inset 1px 0px 30px -13px rgba(129, 129, 129, 1);
+  box-shadow: inset 1px 0px 15px -13px rgba(129, 129, 129, 1);
 }
 
 .resumeBorderRow {
-  border-bottom: solid #d2d7da 3px;
+  border-bottom: solid #615c5c 3px;
   width: 55%;
   float: none;
   margin: 0 auto;
@@ -112,10 +131,10 @@ h1.resumeTitle {
   margin-bottom: 10px;
 }
 
-h1.aboutMeTitle {
+.aboutMeTitle {
   text-align: center;
-  margin-top: 2%;
-  font-size: 3.33rem;
+  padding-top: 1.25rem;
+  font-size: 2.75rem;
   font-weight:500;
 }
 
@@ -123,21 +142,21 @@ h1.aboutMeTitle {
   text-align: center;
 }
 
+
 .projectsTitle {
-  font-size: 4.16rem;
-  padding-bottom: 1%;
-  padding-top: 1%;
+  font-size: 3.25rem;
+  padding-top: 3vh;
   font-weight: 500;
 }
 
 .projectList {
   font-size: 25pt;
-  border-radius: 20px;
-  box-shadow: inset 1px 0px 30px -13px rgba(129, 129, 129, .2);
+  /* border-radius: 20px; */
+  /* box-shadow: inset 1px 0px 30px -13px rgba(129, 129, 129, .2); */
   margin-right: 10vw;
   margin-left: 10vw;
   padding-bottom: 4vh;
-  padding-top: 4vh;
+  padding-top: 2vh;
 }
 
 ul {
@@ -146,11 +165,34 @@ ul {
 
 .project {
   padding: 15px;
+  width: 45vw;
+  display: inline-table;
+  float: none;
+
+}
+
+.btn-primary {
+  background-color: rgba(48, 48, 48, 0.93);
+  box-shadow: -1px 3px 15px -4px rgba(0,0,0,0.5);
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 100;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn-primary:visited {
+  background-color: rgba(54, 129, 161, 0.84);
+}
+
+.btn-primary:hover {
+  background-color: #2a2828;
 }
 
 .optimizerTitle {
   padding: 10px;
   font-weight: 575;
+  font-size: 2.50rem;
+  font-weight:500
 }
 
 .optimizerCodeColumn {
@@ -188,7 +230,8 @@ ul {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: #dedddd;
+  background: #313131;
+  color: #313131;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -464,6 +507,14 @@ ul {
   color:rgb(31, 111, 145);
 }
 
+#navLinkedInBtn {
+  color: rgb(238, 238, 238);
+}
+
+#navGithubBtn {
+  color: rgb(238, 238, 238);
+}
+
 .patrickRecommendationContainer{
   height: 65vh;
 }
@@ -477,6 +528,7 @@ ul {
 
 .fa-home{
   font-size: 1.8rem;
+  color: rgb(238, 238, 238) !important;
 }
 
 /* Phones */
@@ -510,17 +562,11 @@ ul {
     padding-top: 1rem;
     margin-left: 4vw;
   }
-  .aboutMeTitle {
-    padding-top: 1rem;
-  }
 
   .aboutMeTitleContainer{
     padding-left: 1rem;
     padding-right: 1rem;
 
-  }
-  .projectsTitle {
-    padding-top: 1rem;
   }
   .teslaPresentation {
     height: auto;
@@ -543,7 +589,7 @@ ul {
     padding-top: 15vh;
   }
   .projectList {
-    box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 1);
+    /* box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 1); */
   }
 
   /* landscape phones */

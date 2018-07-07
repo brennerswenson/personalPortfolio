@@ -2,49 +2,53 @@
 {% load staticfiles %}
 {% block content %}
 
-  <div class="projectsContainer container-fluid">
-    <div class="row">
-      <h1 class='col-lg-12 projectsTitle'>Projects</h1>
-    </div>
-    <div class="row projectList">
+<div class="projectsContainer container-fluid">
+  <div class="row">
+    <p class='col-lg-12 projectsTitle'>PROJECTS</p>
+  </div>
+  <div class="row projectList">
+    <div class="projectsButtonContainer">
+
+
       <ul class='col-lg-12'>
         <li class="project">
-          <a class="projectLink"href="http://www.github.com/brennerswenson/personalPortfolio">
-            This website</a>
+          <a class="btn btn-primary btn-lg btn-block projectButton" href="http://www.github.com/brennerswenson/personalPortfolio" role='button'>THIS WEBSITE</a>
         </li>
         <li class="project">
-          <a class="projectLink" href="{% url 'projects:optimizer'%}">Portfolio weights and Sharpe Ratio optimizer</a>
+          <a class="btn btn-primary btn-lg btn-block projectButton" href="{% url 'projects:optimizer'%}" role='button'>PORTFOLIO WEIGHTS AND SHARPE RATIO OPTIMIZER</a>
         </li>
         <li class="project">
-          <a class="projectLink" href=" {% url 'projects:encrypter'%} ">PDF encrypter</a>
+          <a class="btn btn-primary btn-lg btn-block projectButton" href=" {% url 'projects:encrypter'%} " role='button'>PDF ENCRYPTER</a>
         </li>
-        {% comment %} <li class="project">
+        {% comment %}
+        <li class="project">
           <a href="http://www.quantopian.com">
             Trading algorithms</a>
         </li> {% endcomment %}
         <li class="project">
-          <a class="projectLink"href=" {% url 'projects:holdback' %}">Hedge fund full-redemption hold back interest calculator</a>
-</li>
-        <li class="project">
-          <a class="projectLink" href="{% url 'projects:tesla' %}">
-            Tesla business model evaluation</a>
+          <a class="btn btn-primary btn-lg btn-block projectButton" href=" {% url 'projects:holdback' %}" role='button'>HEDGE FUND FULL-REDEMPTION HOLD BACK INTEREST CALCULATOR</a>
         </li>
         <li class="project">
-          <a class="projectLink" href="{% url 'projects:ebay' %}">
-            eBay outsourcing case study</a>
+          <a class="btn btn-primary btn-lg btn-block projectButton" href="{% url 'projects:tesla' %}" role='button'>
+            TESLA BUSINESS MODEL EVALUATION</a>
         </li>
         <li class="project">
-          <a class="projectLink" href="{% url 'projects:blackstone' %}">
-            Hilton Blackstone hotels leveraged buyout analysis</a>
+          <a class="btn btn-primary btn-lg btn-block projectButton" href="{% url 'projects:ebay' %}" role='button'>
+            EBAY OUTSOURCING CASE STUDY</a>
         </li>
         <li class="project">
-          <a class="projectLink" href="{% url 'projects:marketwrap' %}">
-            Weekly market developments 22/3/2017
+          <a class="btn btn-primary btn-lg btn-block projectButton" href="{% url 'projects:blackstone' %}" role='button'>
+            HILTON BLACKSTONE HOTELS LEVERAGED BUYOUT ANALYSIS</a>
+        </li>
+        <li class="project">
+          <a class="btn btn-primary btn-lg btn-block projectButton" href="{% url 'projects:marketwrap' %}" role='button'>
+            WEEKLY MARKET DEVELOPMENTS 22/3/2017
           </a>
         </li>
       </ul>
     </div>
-
   </div>
+
+</div>
 
 {% endblock content %}

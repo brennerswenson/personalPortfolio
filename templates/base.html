@@ -6,7 +6,7 @@
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Brenner Swenson</title>
+    <title>BRENNER SWENSON</title>
 
     <!-- Latest compiled and minified CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -19,6 +19,10 @@
     <link href="https://fonts.googleapis.com/css?family=Assistant:300|Lato:300|Merriweather:300,400|PT+Serif:700|Playfair+Display" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100|Open+Sans:300" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 
     <link rel="stylesheet" href="{% static '/css/tomorrow.css' %}">
 
@@ -42,27 +46,27 @@
 </head>
 
 <body>
-  <div class="globalContainer container-fluid">
 
-    <header class="navContainer container-fluid">
+
+    <header class="navContainer">
 
       <nav class="navbar navbar-light navbar-expand-sm  mynav" role='navigation' id='navbar'>
         <div class="container">
           <a href="{% url 'home' %}" class="nav navbar-nav justify-content-start nav-link mynav" id='myNavIDLeft'><i class="nav-link fas fa-home fa-1x"></i></a>
           <ul class="nav navbar-nav justify-content-end mynav" id="myNavID">
-            <li class='nav-item' id="myNavID">
-              <a href="{% url 'projects:projects' %}" class="nav-link" id="myNavID">Projects</a>
+            <li class='nav-item nav-text' id="myNavID">
+              <a href="{% url 'projects:projects' %}" class="nav-link" id="myNavID">PROJECTS</a>
             </li>
-            <li class="nav-item" id="myNavID">
-              <a href="{% url 'resume' %}" class="nav-link" id="myNavID">Resume</a>
+            <li class="nav-item nav-text" id="myNavID">
+              <a href="{% url 'resume' %}" class="nav-link" id="myNavID">RESUME</a>
             </li>
-            <li class='nav-item' id="myNavID">
-              <a href={% url 'references' %} class="nav-link" id="myNavID">References</a>
+            <li class='nav-item nav-text' id="myNavID">
+              <a href={% url 'references' %} class="nav-link" id="myNavID">REFERENCES</a>
             </li>
-            <li class='nav-item' id="myNavID"> <a href="https://github.com/brennerswenson"><i class="nav-link fab fa-github fa-2x"></i></a>
+            <li class='nav-item' id="myNavID"> <a href="https://github.com/brennerswenson"><i id="navGithubBtn" class="nav-link fab fa-github fa-2x"></i></a>
               {# <a href="https://www.linkedin.com/in/brenner-swenson/" class="nav-link" id="myNavID">LinkedIn</a> #}
             </li>
-            <li class='nav-item' id="myNavID"> <a href="https://www.linkedin.com/in/brenner-swenson/"><i class=" nav-link fab fa-linkedin refLinkedInBtn fa-2x"></i></a>
+            <li class='nav-item' id="myNavID"> <a href="https://www.linkedin.com/in/brenner-swenson/"><i id="navLinkedInBtn" class=" nav-link fab fa-linkedin refLinkedInBtn fa-2x"></i></a>
               {# <a href="https://www.linkedin.com/in/brenner-swenson/" class="nav-link" id="myNavID">LinkedIn</a> #}
             </li>
 
@@ -71,6 +75,7 @@
         </div>
       </nav>
     </header>
+    <div class="globalContainer container-fluid">
     <section class="row myContent">
       {% block content %}
         <p></p>
@@ -81,14 +86,14 @@
         <div class="row">
           <div class="col-sm-12 footer text-center">
             <div class="footerContent">
-              <h5 class='text-muted'>Contact me:</h5>
-              <h5 class='text-muted'>brenner.swenson@gmail.com</h5>
+              <i class="fas fa-envelope fa-1x"></i>
+              <p id="footerEmail">BRENNER.SWENSON@GMAIL.COM</p>
             </div>
           </div>
         </footer>
       </div>
     </div>
-  </div>
+
 </body>
 
 </html>
