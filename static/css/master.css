@@ -3,24 +3,41 @@
   background-color: #313131;
 }
 
-#myNavIDLeft {
+#homeButton {
   font-size: 1.10rem;
   color: #ffffff;
   text-align: left;
-  font-weight: 100;
+  font-size: 1.8rem;
+  color: rgb(238, 238, 238) !important;
 }
 
-#myNavID {
-  font-size: 1.05rem;
-  color: #ffffff;
-  margin-right: 5px;
-  margin-left: 5px;
+#collapsibleNavbar{
   font-weight: 100;
-  font-family: 'Lato', sans-serif;
 }
 
 .nav-text {
   padding-top: .28rem;
+}
+
+.nav-item {
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+#hamburger{
+  color: #ffffff !important;
+}
+
+.navbar-toggler-icon{
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #ffffff !important;
+}
+
+.nav-item {
+  text-align: right;
 }
 
 body {
@@ -526,11 +543,6 @@ ul {
   padding-right: 1vw;
 }
 
-.fa-home{
-  font-size: 1.8rem;
-  color: rgb(238, 238, 238) !important;
-}
-
 /* Phones */
 
 @media (max-width: 415px) {
@@ -623,4 +635,4 @@ ul {
       width: 90%;
       padding-top: 15vh;
     }
-  }
+}
