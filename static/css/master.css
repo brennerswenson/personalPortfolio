@@ -85,7 +85,7 @@ body {
 }
 
 .headshotContainer {
-  padding-left: 13vw;
+  padding-left: 8vw;
   max-height: 75vh;
   display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@ body {
 }
 
 .headshot {
-  width: 65%;
+  width: 80%;
   height: auto;
 }
 
@@ -182,7 +182,7 @@ ul {
 
 .project {
   padding: 15px;
-  width: 45vw;
+  width: 50vw;
   display: inline-table;
   float: none;
   max-width: 100vw;
@@ -196,6 +196,9 @@ ul {
   color: #ffffff;
   font-weight: 100;
   font-family: 'Lato', sans-serif;
+  white-space:normal !important;
+  word-wrap: break-word;
+  text-align: center;
 }
 
 .btn-primary:visited {
@@ -545,6 +548,10 @@ ul {
   padding-right: 1vw;
 }
 
+.desktopDisclaimer{
+  display: none;
+}
+
 /* Phones */
 
 @media (max-width: 415px) {
@@ -572,9 +579,13 @@ ul {
     display: flex;
   }
   .headshotContainer {
-    max-height: 60vh;
     padding-top: 1rem;
     margin-left: 4vw;
+  }
+
+  .headshot {
+    width: 90%;
+    height: auto;
   }
 
   .aboutMeTitleContainer{
@@ -662,6 +673,14 @@ ul {
 
   }
 
+  .desktopDisclaimer {
+    display:contents;
+    font-style: italic;
+    padding-top: 1vh;
+    font-size: .9rem;
+  }
+
+
   /* landscape phones */
   @media (min-width: 420px) and (max-width: 830px) {
     .headshot {
@@ -692,5 +711,11 @@ ul {
       height: auto;
       width: 90%;
       padding-top: 15vh;
+    }
+    .desktopDisclaimer {
+      display:contents;
+      font-style: italic;
+      padding-top: 1vh;
+      font-size: .9rem;
     }
 }
