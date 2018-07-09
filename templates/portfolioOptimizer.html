@@ -422,37 +422,36 @@
               </div>
 
             </div>
-          <p class="optimizerExplanationText">
+          <div class="optimizerExplanationText">
             <h4 class="carouselDisclaimer text-muted" >Plots (above) created by script (<em>hover mouse on image to pause slide</em>)</h4>
-            <br>
+            <p class="optimizerExplanationTextParagraph">
             I wrote this interactive Python script to expand on my understanding of Markowitz’s portfolio theory. I learned about it all through school but never really had a chance to apply it practically. This interactive Python script’s goal is to return the optimized portfolio allocations for a user-provided period of time, for a portfolio of n securities. The metric being optimized is the Sharpe Ratio, which is the average portfolio return divided by the weighted average standard deviation of the portfolio. William Sharpe’s original ratio accounts for a return of a risk free asset, but in my calculation it is omitted as the average risk free rate for the last ten years is very close to zero. You can read more about William Sharpe’s ratio <a href="https://en.wikipedia.org/wiki/Sharpe_ratio">here</a>.
-
-            <br>
-            <br>
+            </p>
+            <p>
 The script focuses on one main function, get_return_volatility_SR(), which takes in a list of security weights, and returns the portfolio returns, standard deviation, and Sharpe Ratio for those given weights over a period of time. This is the function that is optimized later in the script. There are several helper functions that assist in the optimization process, such as the minimize_volatility() function as well as the negative_sharpe() function which simply returns the negated output of the get_return_volatility_SR() function. This is because the optimizer used is a minimizer, so the target value needs to be negative.
-<br>
-<br>
+</p>
+<p>
 The flow of the script asks the user for a desired time period to run the optimizer for, and prompts them to enter as many stock tickers as they like. Using Morningstar’s API and Pandas DataReader, the script queries the API and returns a Pandas DataFrame containing security’s adjusted close price for the time period, as well as obtaining the SPY ETF as a benchmark security for plotting later on. The beginning five and ending five trading days are displayed in the script for user validation.
-<br>
-<br>
+</p>
+<p>
 Any optimizer requires constraints. In this case, the constraints are that the weights must be between zero and one, and that the weights must sum to one (no shorting or leverage). The optimizer itself uses sequential least squares programming (SLSQP) to minimize the negative Sharpe Ratio formula. You can read more about it <a href="http://www.pyopt.org/reference/optimizers.slsqp.html">here</a>. The optimized values are stored in a variable called optimized_results, which can be indexed later to retrieve various optimized metrics. After the minimization is ran, the script prints the optimized Sharpe Ratio to the user, and then prints a list of the portfolio securities’ allocation percentages.
-<br>
-<br>
+</p>
+<p>
 Using the optimized portfolio weights, the script creates a Pandas DataFrame with each security as a column with a starting value of 1,000, then multiplying each column by its respective optimized portfolio weight. The script then creates one more column called ‘TOTAL’ which sums horizontally to arrive at the entire portfolio’s value for each trading day.
-<br>
-<br>
+</p>
+<p>
 Using the Python library Matplotlib, the script plots a control portfolio assuming equal security allocations, a 3 month simple moving average, the optimized portfolio, and the S&P 500. Each of these hypothetical portfolios have a starting value of $1,000. The first graph, above, is the first resulting chart. You will see that the optimized portfolio performed significantly better than the equally allocated portfolio of the same securities.
-<br>
-<br>
+</p>
+<p>
 However, some investors may have a higher appetite for risk than others, meaning that they still want an efficient portfolio, but with the possibility for a higher standard deviation. Harry Markowitz’s Efficient Frontier describes this; that there is an efficient set of portfolios that generate the highest amount of expected return for a given amount of risk. You can read about this Nobel Prize winning theory <a href="https://en.wikipedia.org/wiki/Modern_portfolio_theory">here</a>.
-<br>
-<br>
+</p>
+<p>
 The script plots the portfolio’s optimized Efficient Frontier. First, the script creates a list of 200 points, evenly spaced between the portfolio’s maximum and minimum returns. Subsequently, using the same minimize() function, iterates through this list of 200 hypothetical returns, and only returns the standard deviation if the hypothetical return matches the return of the previously calculated optimized weights. The standard deviation is then appended to an empty list, until all 200 possible returns have been iterated through.
-<br>
-<br>
+</p>
+<p>
 These two lists are then plotted together via a Matplotlib scatter plot, which results in the Efficient Frontier being created. Also annotated is the highest Sharpe Ratio on the frontier, which is what was returned previously in the script. Both the return graph and the Efficient Frontier graph are presented to the user after the script ends, where the user has the option to save the figures if desired.
-
-          </p>
+</p>
+</div>
         </div>
         <div class="fadedScrollerOptimizer_fade">
 
