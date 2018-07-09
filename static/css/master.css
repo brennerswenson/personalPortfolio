@@ -562,9 +562,9 @@ ul {
     height: auto;
   }
   .aboutMeText {
-    text-align: justify;
+    text-align: left;
     padding-left: 10vw;
-    padding-right: 2vw;
+    padding-right: 4vw;
   }
   .aboutMeTextContainer {
     display: flex;
