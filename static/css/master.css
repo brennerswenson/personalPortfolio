@@ -236,7 +236,6 @@ ul {
 .optimizerExplanationText {
   padding-left: 30px;
   padding-right: 30px;
-  box-shadow: inset 1px 0px 20px -13px rgba(129, 129, 129, 1);
 }
 
 ::-webkit-scrollbar {
@@ -679,7 +678,6 @@ ul {
     padding-top: 1vh;
     font-size: .9rem;
   }
-
 
   /* landscape phones */
   @media (min-width: 420px) and (max-width: 830px) {
